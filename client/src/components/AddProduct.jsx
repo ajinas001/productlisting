@@ -31,7 +31,7 @@ function AddProduct() {
 
   useEffect((e) => {
     if (forcat.category) {
-      axios.post(`https://productlisting-rpw9.onrender.com/save/view-subcategory/${forcat.category}`)
+      axios.get(`https://productlisting-rpw9.onrender.com/save/view-subcategory/${forcat.category}`)
         .then((res) => {
           console.log("res", res);
           setSubcategories(res.data.data);

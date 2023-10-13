@@ -36,7 +36,7 @@ function HomeBg() {
 
   useEffect((e) => {
     if (forcat.category) {
-      axios.post(`https://productlisting-rpw9.onrender.com/view-subcategory/${forcat.category}`)
+      axios.get(`https://productlisting-rpw9.onrender.com/view-subcategory/${forcat.category}`)
         .then((res) => {
           console.log("res", res);
           setSubcategories(res.data.data);
@@ -59,7 +59,7 @@ function HomeBg() {
 
   useEffect((e) => {
     if (forsubcat.subcategory) {
-      axios.post(`https://productlisting-rpw9.onrender.com/save/view-products/${forsubcat.subcategory}`)
+      axios.get(`https://productlisting-rpw9.onrender.com/save/view-products/${forsubcat.subcategory}`)
         .then((res) => {
           console.log("res", res);
           setProducts(res.data.data);

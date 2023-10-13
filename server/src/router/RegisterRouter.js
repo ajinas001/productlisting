@@ -33,7 +33,7 @@ RegisterRouter.post('/category', async (req, res) => {
     }
 
 })
-RegisterRouter.post('/view-subcategory/:category', async (req, res) => {
+RegisterRouter.get('/view-subcategory/:category', async (req, res) => {
     try {
         const category = req.params.category
         console.log('cat', category);
@@ -60,7 +60,7 @@ RegisterRouter.post('/view-subcategory/:category', async (req, res) => {
 
 })
 
-RegisterRouter.post('/view-products/:subcategory', async (req, res) => {
+RegisterRouter.get('/view-products/:subcategory', async (req, res) => {
     try {
         const subcategory = req.params.subcategory
         console.log('subcat', subcategory);
