@@ -36,7 +36,9 @@ function HomeBg() {
 
   useEffect((e) => {
     if (forcat.category) {
-      axios.get(`https://productlisting-rpw9.onrender.com/view-subcategory/${forcat.category}`)
+      // axios.get(`https://productlisting-rpw9.onrender.com/view-subcategory/${forcat.category}`)
+      axios.get('https://productlisting-rpw9.onrender.com/save/view-subcategory')
+      
         .then((res) => {
           console.log("res", res);
           setSubcategories(res.data.data);
