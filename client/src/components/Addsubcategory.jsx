@@ -9,7 +9,7 @@ function Addsubcategory() {
  
 
   useEffect(() => {
-    axios.get('http://localhost:4000/save/view-category')
+    axios.get('https://productlisting-rpw9.onrender.com/save/view-category')
       .then((res) => {
         console.log("res", res);
         setName(res.data.data);
@@ -34,7 +34,7 @@ function Addsubcategory() {
     const validate = (event) => {
      
       console.log("datas", data);
-      axios.post("http://localhost:4000/save/subcategory", data).then((res) => {
+      axios.post("https://productlisting-rpw9.onrender.com/save/subcategory", data).then((res) => {
         console.log("res", res);
         event.preventDefault()
         swal("added");

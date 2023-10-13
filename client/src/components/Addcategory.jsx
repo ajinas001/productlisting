@@ -14,7 +14,7 @@ function Addcategory() {
   const validate = (event) => {
    
     console.log("datas", data);
-    axios.post("http://localhost:4000/save/category", data).then((res) => {
+    axios.post("https://productlisting-rpw9.onrender.com/save/category", data).then((res) => {
       console.log("res", res);
       swal("added");
       event.preventDefault()

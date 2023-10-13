@@ -9,7 +9,7 @@ function AddProduct() {
   const [subcategories, setSubcategories] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:4000/save/view-category')
+    axios.get('https://productlisting-rpw9.onrender.com/save/view-category')
       .then((res) => {
         console.log("res", res);
         setName(res.data.data);
@@ -29,7 +29,7 @@ function AddProduct() {
 
   useEffect((e) => {
     if (forcat.category) {
-      axios.post(`http://localhost:4000/save/view-subcategory/${forcat.category}`)
+      axios.post(`https://productlisting-rpw9.onrender.com/save/view-subcategory/${forcat.category}`)
         .then((res) => {
           console.log("res", res);
           setSubcategories(res.data.data);
@@ -56,8 +56,9 @@ function AddProduct() {
   const validate = (event) => {
 
     console.log("datas", data);
-    axios.post("http://localhost:4000/save/product", data,name,subcategories,forcat).then((res) => {
+    axios.post("https://productlisting-rpw9.onrender.com/save/product", data,name,subcategories,forcat).then((res) => {
       console.log("res", res);
+      swal("added");
     });
   };
 

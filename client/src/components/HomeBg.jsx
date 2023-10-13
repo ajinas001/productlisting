@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 function HomeBg() {
@@ -14,7 +14,7 @@ function HomeBg() {
   const [data, setdata] = useState();
 
   useEffect(() => {
-    axios.get('http://localhost:4000/save/view-category')
+    axios.get('https://productlisting-rpw9.onrender.com/save/view-category')
 
       .then((res) => {
         console.log("res", res);
@@ -36,7 +36,7 @@ function HomeBg() {
 
   useEffect((e) => {
     if (forcat.category) {
-      axios.post(`http://localhost:4000/save/view-subcategory/${forcat.category}`)
+      axios.post(`https://productlisting-rpw9.onrender.com/view-subcategory/${forcat.category}`)
         .then((res) => {
           console.log("res", res);
           setSubcategories(res.data.data);
@@ -59,7 +59,7 @@ function HomeBg() {
 
   useEffect((e) => {
     if (forsubcat.subcategory) {
-      axios.post(`http://localhost:4000/save/view-products/${forsubcat.subcategory}`)
+      axios.post(`https://productlisting-rpw9.onrender.com/save/view-products/${forsubcat.subcategory}`)
         .then((res) => {
           console.log("res", res);
           setProducts(res.data.data);
@@ -124,14 +124,15 @@ function HomeBg() {
 
                       <ul className="dropdown-menu">
                         <li>
-                          <a className="dropdown-item" href="/addcategory">
+                          
+                          <Link to={"/addcategory"} className="dropdown-item" >
                             Addcategory
-                          </a>
+                            </Link>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="/addsubcategory">
+                          <Link  to={"/addsubcategory"}  className="dropdown-item" >
                             Add subcategory
-                          </a>
+                          </Link>
                         </li>
 
                       </ul>
@@ -150,9 +151,9 @@ function HomeBg() {
 
                       <ul className="dropdown-menu">
                         <li>
-                          <a className="dropdown-item" href="/addproducts">
+                          <Link to = {"/addproducts"} className="dropdown-item" >
                             Add products
-                          </a>
+                          </Link>
                         </li>
                         {/* <li>
                           <a className="dropdown-item" href="/">
