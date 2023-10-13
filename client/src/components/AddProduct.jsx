@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import swal from "sweetalert";
+
 
 function AddProduct() {
   const [data, setdata] = useState();
