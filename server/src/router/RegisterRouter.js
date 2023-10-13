@@ -172,24 +172,24 @@ RegisterRouter.get('/view-category', async (req, res) => {
 }
 )
 
-RegisterRouter.get('/view-subcategory', async (req, res) => {
-    // const  {name,category ,description,image,price}=req.body
-    // console.log(req.body);
-    const category = req.params.id
-    const productData = await subcategoryModel.find()
-    try {
-        if (productData) {
-            return res.status(200).json({
-                success: true,
-                error: false,
-                data: productData
-            })
-        }
-    }
-    catch (error) {
-    }
-}
-)
+// RegisterRouter.get('/view-subcategory', async (req, res) => {
+//     // const  {name,category ,description,image,price}=req.body
+//     // console.log(req.body);
+//     const category = req.params.id
+//     const productData = await subcategoryModel.find()
+//     try {
+//         if (productData) {
+//             return res.status(200).json({
+//                 success: true,
+//                 error: false,
+//                 data: productData
+//             })
+//         }
+//     }
+//     catch (error) {
+//     }
+// }
+// )
 
 
 

@@ -36,8 +36,8 @@ function HomeBg() {
 
   useEffect((e) => {
     if (forcat.category) {
-      // axios.get(`https://productlisting-rpw9.onrender.com/view-subcategory/${forcat.category}`)
-      axios.get('https://productlisting-rpw9.onrender.com/save/view-subcategory')
+      
+      axios.get(`https://productlisting-rpw9.onrender.com/save/view-subcategory/${forcat.category}`)
       
         .then((res) => {
           console.log("res", res);
