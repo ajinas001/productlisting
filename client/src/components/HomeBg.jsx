@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import './main.css'
+
 
 
 function HomeBg() {
@@ -91,7 +93,7 @@ function HomeBg() {
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
               <div className="container-fluid">
                 <a className="navbar-brand ps-4" href="#">
-                  <h1>Electronics</h1>
+                  <h1 id="elec-title">Electronics</h1>
                 </a>
                 <button
                   className="navbar-toggler"
@@ -183,6 +185,7 @@ function HomeBg() {
 
       <div className="container-fluid">
         <div className="row ">
+          <div className="col-lg-8">
           <div className="d-flex">
             <div className="mt-3 ps-5">
               <label htmlFor="exampleInputPassword1" className="form-label">
@@ -243,6 +246,8 @@ function HomeBg() {
             </div>
 
           </div>
+          </div>
+          <div className="col-lg-4"></div>
         </div>
       </div>
     </>
