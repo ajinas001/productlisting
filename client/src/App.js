@@ -15,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomeBg />}> </Route>
+          <Route path='/productlisting' element={<HomeBg />}> </Route>
           <Route path='/addcategory' element={<CategoryPg />}></Route>
             <Route path='/addsubcategory' element={<Subcategorypg />}></Route>
             <Route path='/addproducts' element={<Productpg />}></Route>
